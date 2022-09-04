@@ -25,7 +25,7 @@ int isEmpty(struct stack* stack){
 
 void push(struct stack* stack,int value){
     if(isFull(stack)){
-        printf("Stack overflow!");
+        printf("Stack overflow!\n");
         return;
     }
     stack->arr[++stack->top] = value;
@@ -58,10 +58,10 @@ int main(){
     printf("Type the number: ");
     scanf("%d",&num);
 
-    int capacity = floor(log(num)/log(2));
+    int capacity = floor(log(num)/log(2))+1;
 
     struct stack *stack = create_stack(capacity);
-    for(int i=0;i<capacity;i++){
+    for(int i=0;i<=capacity;i++){
         push(stack,num%2);
         if(num == 2){
             push(stack,1);
