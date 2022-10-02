@@ -84,7 +84,7 @@ def main():
     nomes.insert("Claudio")
 
     print(nomes)
-    nomes.remove(3)
+    nomes.removeByKey("Luiz")
     print(nomes)
     nomes.insert("Arthur",3)
     print(nomes)
